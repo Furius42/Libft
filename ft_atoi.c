@@ -16,8 +16,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_atoi(const char *nptr);
-
 int	main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -29,10 +27,6 @@ int	main(int argc, char *argv[])
 	printf("Da atoi: %d\n", atoi(argv[1]));
 }
 */
-static int	ft_isspace(int ch)
-{
-	return (ch == ' ' || (ch >= 9 && ch <= 13));
-}
 
 int	ft_atoi(const char *nptr)
 {
