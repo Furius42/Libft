@@ -37,11 +37,11 @@ char	*ft_strrchr(const char *s, int c)
 	sx = s;
 	while (*sx)
 		sx++;
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)sx);
 	while (s != sx--)
 	{
-		if (*sx == c)
+		if (*sx == (unsigned char)c)
 			return ((char *)sx);
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: vhoracek <vhoracek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 02:20:26 by vhoracek          #+#    #+#             */
-/*   Updated: 2025/01/20 14:27:04 by vhoracek         ###   ########.fr       */
+/*   Updated: 2025/02/04 19:23:15 by vhoracek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	main(int argc, char *argv[])
 	printf("Da atoi: %d\n", atoi(argv[1]));
 }
 */
+static int	ft_isspace(int ch)
+{
+	return (ch == ' ' || (ch >= 9 && ch <= 13));
+}
 
 int	ft_atoi(const char *nptr)
 {

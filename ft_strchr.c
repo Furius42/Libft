@@ -9,11 +9,10 @@
 /*   Updated: 2024/12/15 18:33:26 by vhoracek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-#include "libft.h"
 /*
 #include <string.h>
-#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c);
 
@@ -22,10 +21,10 @@ int		main(int argc, char* argv[])
 	char *str;
 	int chr;
 
-	if (argc != 3)
-		exit (0);
-	str = argv[1];
-	chr = *argv[2];
+//	if (argc != 3)
+//		exit (0);
+	str = "teste";
+	chr = 'e';
 	printf("ft_strchr output: %p\n", ft_strchr(str,chr));
 	printf("strchr output: %p\n", strchr(str,chr));
 	return (0);
@@ -35,11 +34,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }
